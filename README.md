@@ -80,6 +80,14 @@ candleaudit --help
 
 For a development checkout, use `python -m pip install -e .` and then run the test suite. CSV inputs are **untrusted**: review them before processing, and keep raw data backups. `trades` should only be used after `candles` passes for its market-data file. See [example walkthrough](docs/quickstart.md).
 
+## Try CandleAudit and contribute
+
+For a reproducible, two-minute demonstration, see the [hands-on audit guide](docs/practical-audit.md). The tool accepts local CSV files and does not require an exchange account or API key.
+
+New contributors can start with the [contributor walkthrough](docs/community-onboarding.md) and the project's [open issues](https://github.com/aliyousefiyan/candleaudit/issues). Maintainers follow the [maintenance and release policy](docs/maintainer-policy.md). Reports of real-world use are welcome, but please remove account identifiers, trading strategies, credentials, and non-redistributable data.
+
+There is no PyPI package or official GitHub Release yet; the supported installation method is from this GitHub repository. Green audit results are limited to the checks documented above, not a certification of profitability or overall backtest correctness.
+
 ## Project status
 
 **v0.2.0: initial educational release candidate.** Public adoption and maintainer activity have **not** been established. GitHub stars, community usage, and eligibility for any maintainer grant must not be assumed.
