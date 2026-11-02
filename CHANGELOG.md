@@ -1,3 +1,9 @@
+## Unreleased
+
+- Add practical reproducible audit walkthrough and contributor onboarding instructions.
+- Document public maintenance practices, release gates and limits of support.
+- Refresh CI setup-python GitHub Action after reviewing the dependency bot's suggested update.
+
 # Changelog
 
 ## 0.2.0 — 2026-11-02
