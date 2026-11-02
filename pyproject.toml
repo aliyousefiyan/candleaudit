@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "candleaudit"
+version = "0.2.0"
+description = "Deterministic OHLCV, causality and next-candle execution checks for educational backtesting"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "CandleAudit contributors"}]
+keywords = ["backtesting", "crypto", "OHLCV", "lookahead", "data-quality", "audit"]
+classifiers = ["Programming Language :: Python :: 3", "Topic :: Scientific/Engineering :: Information Analysis"]
+
+[project.scripts]
+candleaudit = "candleaudit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+Homepage = "https://github.com/aliyousefiyan/candleaudit"
+Issues = "https://github.com/aliyousefiyan/candleaudit/issues"
+Documentation = "https://github.com/aliyousefiyan/candleaudit#readme"
+
+[tool.setuptools]
+include-package-data = false
