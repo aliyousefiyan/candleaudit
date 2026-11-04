@@ -4,7 +4,7 @@
 
 **Small, reproducible integrity checks for OHLCV datasets and educational backtests.**
 
-[فارسی](README.fa.md) · [Design and limits](docs/design.md) · [Roadmap](docs/roadmap.md) · [Contributing](CONTRIBUTING.md)
+[فارسی](README.fa.md) · [Design and limits](docs/design.md) · [Verification](docs/VERIFICATION.md) · [Roadmap](docs/roadmap.md) · [Contributing](CONTRIBUTING.md)
 
 Market-data mistakes and time leakage can silently invalidate a backtest. CandleAudit is a Python standard-library CLI that makes a few common problems visible **before** you trust a performance report.
 
@@ -91,6 +91,10 @@ There is no PyPI package or official GitHub Release yet; the supported installat
 ## Project status
 
 **v0.2.0: initial educational release candidate.** Public adoption and maintainer activity have **not** been established. GitHub stars, community usage, and eligibility for any maintainer grant must not be assumed.
+
+## Related project
+
+[CandleBacktest AI](https://github.com/aliyousefiyan/candlebacktest-ai) is a separate experimental strategy builder/backtesting engine. CandleAudit is an **independent diagnostic CLI**, not a trading engine. The backtester can optionally invoke only CandleAudit's candle check; it does not automatically run CandleAudit's feature/trade audits. See the [verification guide](docs/VERIFICATION.md).
 
 ## License
 
