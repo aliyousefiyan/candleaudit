@@ -99,3 +99,7 @@ There is no PyPI package or official GitHub Release yet; the supported installat
 ## License
 
 MIT. See [LICENSE](LICENSE). No exchange affiliation. Not investment advice.
+
+## ChatGPT skill-plugin candidate
+
+A **skills-only** plugin package can be built from this public repository with `python scripts/build_chatgpt_plugin.py --smoke`. The ZIP includes the project's Python CLI, synthetic examples and constrained workflow instructions. See [ChatGPT plugin readiness and limitations](docs/CHATGPT_PLUGIN_REVIEW.md), [privacy policy](PRIVACY.md) and [terms](TERMS.md). **No OpenAI approval or public plugin-directory listing is claimed.** A Python-enabled host is required to execute packaged checks; this is not a hosted MCP app.
