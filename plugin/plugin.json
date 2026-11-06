@@ -1,0 +1,38 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "candleaudit",
+  "version": "0.2.0",
+  "description": "Check user-provided OHLCV CSV integrity and recorded signal or trade timestamps for educational backtest diagnostics.",
+  "author": {
+    "name": "Community maintainer",
+    "url": "https://github.com/aliyousefiyan/candleaudit"
+  },
+  "homepage": "https://github.com/aliyousefiyan/candleaudit",
+  "repository": "https://github.com/aliyousefiyan/candleaudit",
+  "license": "MIT",
+  "keywords": [
+    "backtest",
+    "education",
+    "ohlcv",
+    "data quality"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "CandleAudit",
+        "shortDescription": "Check user-provided OHLCV CSV integrity and recorded signal or trade timestamps for educational backtest diagnostics.",
+        "longDescription": "Check user-provided OHLCV CSV integrity and recorded signal or trade timestamps for educational backtest diagnostics. No live trading, investing recommendations or exchange access.",
+        "developerName": "Community maintainer",
+        "websiteURL": "https://github.com/aliyousefiyan/candleaudit",
+        "supportURL": "https://github.com/aliyousefiyan/candleaudit/issues",
+        "privacyPolicyURL": "https://github.com/aliyousefiyan/candleaudit/blob/main/PRIVACY.md",
+        "termsOfServiceURL": "https://github.com/aliyousefiyan/candleaudit/blob/main/TERMS.md",
+        "logo": "./assets/logo.png",
+        "defaultPrompt": [
+          "Audit my 4h candle CSV for missing or duplicated bars.",
+          "Check whether my recorded features were available at signal time."
+        ]
+      }
+    }
+  }
+}
