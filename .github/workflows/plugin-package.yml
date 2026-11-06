@@ -2,6 +2,7 @@ name: Build ChatGPT skill plugin candidate
 on:
   push:
   pull_request:
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
@@ -18,3 +19,11 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Build and smoke-test packaged plugin
         run: python scripts/build_chatgpt_plugin.py --smoke
+      - name: Keep tested candidate ZIP as CI artifact
+        if: matrix.python-version == '3.13'
+        uses: actions/upload-artifact@v4
+        with:
+          name: skills-plugin-candidate
+          path: dist/*.zip
+          if-no-files-found: error
+          retention-days: 30
