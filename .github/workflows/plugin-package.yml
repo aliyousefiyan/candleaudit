@@ -1,0 +1,20 @@
+name: Build ChatGPT skill plugin candidate
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Build and smoke-test packaged plugin
+        run: python scripts/build_chatgpt_plugin.py --smoke
